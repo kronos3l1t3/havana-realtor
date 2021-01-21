@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=havana_realtor_app
+POSTGRES_USER=AgTpswZDRpkBrfNfvnvKNdmntkprbHrd
+POSTGRES_PASSWORD=0cjzzAUs2b6UBCkxqTraK9AKSFVb2JXmvowufoyCSkT2PSYeptn3UQAoDnfteBYX
