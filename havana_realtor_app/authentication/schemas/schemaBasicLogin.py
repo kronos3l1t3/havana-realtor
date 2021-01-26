@@ -4,6 +4,9 @@ from graphql_auth import mutations
 
 
 class AuthMutation(graphene.ObjectType):
+    """
+    Class to authentifications, registers, verify accounts, update accounts, delete accounts, secundary email, password change, get token and refresh tokens
+    """
     register = mutations.Register.Field()
     verify_account = mutations.VerifyAccount.Field()
     resend_activation_email = mutations.ResendActivationEmail.Field()
@@ -26,4 +29,5 @@ class AuthMutation(graphene.ObjectType):
     revoke_token = mutations.RevokeToken.Field()
 
 class Auth(graphene.ObjectType):
+
    register_user = relay.Register.Field()
