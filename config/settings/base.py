@@ -83,6 +83,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "havana_realtor_app.users.apps.UsersConfig",
+    # "User"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -97,6 +98,7 @@ MIGRATION_MODULES = {"sites": "havana_realtor_app.contrib.sites.migrations"}
 # https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
+    # "graphql_jwt.backends.JSONWebTokenBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
     "graphql_auth.backends.GraphQLAuthBackend",
 ]
@@ -345,3 +347,5 @@ GRAPHQL_JWT = {
 
 #Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# AUTH_USER_MODEL = 'users.CustomUser'

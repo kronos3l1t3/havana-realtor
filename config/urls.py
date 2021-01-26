@@ -6,6 +6,7 @@ from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
+from havana_realtor_app.schemas import schemas_url
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -27,6 +28,7 @@ if settings.DEBUG:
 urlpatterns += [
     # API base url
     path("api/", include("config.api_router")),
+    path("graph/", include(schemas_url)),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
 ]
